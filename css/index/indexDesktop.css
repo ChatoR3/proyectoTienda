@@ -21,7 +21,7 @@ html{
 
 body{
     font-family: 'Quicksand', sans-serif;
-   /* font-family: 'Roboto', sans-serif;*/
+   /*font-family: 'Roboto', sans-serif;*/
 }
 
 .inactive{
@@ -79,7 +79,6 @@ nav{
 .navbar-email{
     display: flex;
     color: var(--very-light-pink);
-    cursor: pointer;
     font-size: var(--sm);
     margin: 1.2rem;
 }
@@ -103,10 +102,11 @@ nav{
     align-items: center;
 }
 
+
 .desktop-menu{
     position: absolute;
     top: 6rem;
-    right: 4.5rem;
+    right: 4.25rem;
     background: var(--white);
     width: 15rem;
     height: auto;
