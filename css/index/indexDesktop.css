@@ -1,3 +1,4 @@
+/*General*/
 :root{
     --white: #ffffff;
     --black: #000000;
@@ -28,11 +29,16 @@ body{
     display: none;
 }
 
+/*Navbar (general)*/
 nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 0 2.4rem;
+}
+
+nav .mobile-menu{
+    display: none;
 }
 
 .menu{
@@ -78,6 +84,7 @@ nav{
 
 .navbar-email{
     display: flex;
+    cursor: pointer;
     color: var(--very-light-pink);
     font-size: var(--sm);
     margin: 1.2rem;
@@ -102,7 +109,7 @@ nav{
     align-items: center;
 }
 
-
+/*Menú en Desktop*/
 .desktop-menu{
     position: absolute;
     top: 6rem;
