@@ -1,3 +1,4 @@
+/*Generales*/
 :root{
     --white: #ffffff;
     --black: #000000;
@@ -21,9 +22,14 @@ html{
 
 body{
     font-family: 'Quicksand', sans-serif;
-    font-family: 'Roboto', sans-serif;
+  /*  font-family: 'Roboto', sans-serif;*/
 }
 
+.inactive{
+    display: none;
+}
+
+/*Navbar (general)*/
 nav{
     display: flex;
     width: 100%;
@@ -98,4 +104,54 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*Menú en Mobile*/
+.mobile-menu{
+    position: absolute;
+    top: 6rem;
+    padding: 2.4rem;
+}
+
+.mobile-menu a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    font-size: var(--md);
+}
+
+.mobile-menu ul{
+    padding: 0;
+    margin: 2.4rem 0 0;
+    list-style: none;
+}
+
+.mobile-menu ul:nth-child(1){
+    border-bottom: .1rem solid var(--very-light-pink);
+}
+
+.mobile-menu ul li{
+    margin-bottom: 2.4rem;
+}
+
+.email{
+    font-size: var(--sm);
+    font-weight: 300 !important;
+}
+
+.sign-out{
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+}
+
+.mobile-menu ul:nth-child(2){
+    position: absolute;
+    top: 36rem;
+    bottom: 15rem;
+}
+
+.mobile-menu ul:nth-child(3){
+    position: absolute;
+    top: 45rem;
+    bottom: 0;
 }
