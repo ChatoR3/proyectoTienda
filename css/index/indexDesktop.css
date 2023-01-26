@@ -35,6 +35,7 @@ nav{
     width: 100%;
     justify-content: space-between;
     padding: 0 2.4rem;
+    border-bottom: 1px solid var(--very-light-pink);
 }
 
 nav .mobile-menu{
