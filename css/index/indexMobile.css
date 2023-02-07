@@ -255,3 +255,59 @@ nav .desktop-menu{
     font-weight: bold;
     height: 5rem;
 }
+
+
+
+/*Product List Mobile*/
+
+.cards-container{
+    display: grid;
+    /* Número de columnas y tamaño de cada columa*/
+    /*auto-fill se llena automáticamente dependiendo de la cantidad que quepa*/
+    grid-template-columns: repeat(auto-fill,14rem);
+    gap: 2.6rem;
+    place-content: center;
+    margin-top: 2rem;
+}
+
+.product-card{
+    width:14rem
+}
+
+.product-card img{
+    width: 14rem;
+    height: 14rem;
+    border-radius: 2rem;
+    /*object-fit:cover la imagen se ajusta a su tamaño tal cual independientemente del width y del height*/
+    object-fit: cover;
+}
+
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.product-info figure{
+    margin: 0;
+}
+
+.product-info figure img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.product-info div p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: .4rem;
+}
+
+.product-info div p:nth-child(2){
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
+}

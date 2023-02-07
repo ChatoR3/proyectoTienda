@@ -248,3 +248,43 @@ nav .mobile-menu{
     font-weight: bold;
     height: 5rem;
 }
+
+
+
+/*Product List*/
+.cards-container{
+    display: grid;
+    /* Número de columnas y tamaño de cada columa*/
+    /*auto-fill se llena automáticamente dependiendo de la cantidad que quepa*/
+    grid-template-columns: repeat(auto-fill,24rem);
+    gap: 2.6rem;
+    place-content: center;
+    margin-top: 2rem;
+}
+
+.product-card{
+    width:24rem
+}
+
+.product-card img{
+    width: 24rem;
+    height: 24rem;
+    border-radius: 2rem;
+    /*object-fit:cover la imagen se ajusta a su tamaño tal cual independientemente del width y del height*/
+    object-fit: cover;
+}
+
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-info figure{
+    margin: 0;
+}
+
+.product-info figure img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
