@@ -249,8 +249,6 @@ nav .mobile-menu{
     height: 5rem;
 }
 
-
-
 /*Product List*/
 .cards-container{
     display: grid;
@@ -287,4 +285,18 @@ nav .mobile-menu{
 .product-info figure img{
     width: 3.5rem;
     height: 3.5rem;
+}
+
+.product-info div p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: .4rem;
+}
+
+.product-info div p:nth-child(2){
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--very-light-pink);
 }

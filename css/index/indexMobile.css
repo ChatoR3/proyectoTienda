@@ -256,10 +256,7 @@ nav .desktop-menu{
     height: 5rem;
 }
 
-
-
-/*Product List Mobile*/
-
+/*Product List*/
 .cards-container{
     display: grid;
     /* Número de columnas y tamaño de cada columa*/
@@ -267,7 +264,6 @@ nav .desktop-menu{
     grid-template-columns: repeat(auto-fill,14rem);
     gap: 2.6rem;
     place-content: center;
-    margin-top: 2rem;
 }
 
 .product-card{
