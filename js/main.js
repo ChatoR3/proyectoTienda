@@ -1,14 +1,19 @@
+//  Iconos
 const menuEmail = document.querySelector('.navbar-email');
 const burgerMenu = document.querySelector('.menu');
 const shoppingCartIcon = document.querySelector('.navbar-shopping-cart');
+const productDetailCloseIcon = document.querySelector('.product-detail-close')
+
 const desktopMenu = document.querySelector('.desktop-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
+const productDetailContainer = document.querySelector('#productDetail')
 const cardsContainer = document.querySelector('.cards-container')
 
 menuEmail.addEventListener('click', toogleDesktopMenu);
 burgerMenu.addEventListener('click', toggleMobileMenu);
 shoppingCartIcon.addEventListener('click', toogleCarritoAside);
+productDetailCloseIcon.addEventListener('click', closeProductDetailAside);
 
 
 function toogleDesktopMenu(){
@@ -30,6 +35,8 @@ function toggleMobileMenu(){
         shoppingCartContainer.classList.add('inactive');
     }
 
+    closeProductDetailAside();
+
     mobileMenu.classList.toggle('inactive');
 }
 
@@ -37,6 +44,7 @@ function toogleCarritoAside(){
     console.log('click');
     const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
     const isDesktopMenuClosed = desktopMenu.classList.contains('inactive');
+    const isproductDetailClosed = productDetailContainer.classList.contains('inactive');
 
     if(!isMobileMenuClosed){
         mobileMenu.classList.add('inactive');
@@ -46,10 +54,22 @@ function toogleCarritoAside(){
         desktopMenu.classList.add('inactive');
     }
 
+    if(!isproductDetailClosed){
+        productDetailContainer.classList.add('inactive');
+    }
+
     shoppingCartContainer.classList.toggle('inactive');
 }
 
+function openProductDetailAside(){
+    shoppingCartContainer.classList.add('inactive');
 
+    productDetailContainer.classList.remove('inactive');
+}
+
+function closeProductDetailAside(){
+    productDetailContainer.classList.add('inactive');
+}
 // Creamos Lista de productos manualmente
 const productList = [];
 
@@ -100,6 +120,7 @@ function renderProducts(arr){
      // product = {name, price, image} -> product.image
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);  //Se modifica el atributo src con la información de nuestro array
+        productImg.addEventListener('click', openProductDetailAside);
         
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
